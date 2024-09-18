@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pdf_rag_crewai"
+version = "0.1.0"
+description = "PDF_RAG_CrewAI using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.61.0,<1.0.0" }
+
+
+[tool.poetry.scripts]
+pdf_rag_crewai = "pdf_rag_crewai.main:run"
+run_crew = "pdf_rag_crewai.main:run"
+train = "pdf_rag_crewai.main:train"
+replay = "pdf_rag_crewai.main:replay"
+test = "pdf_rag_crewai.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
